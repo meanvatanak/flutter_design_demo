@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_design_app/utilities/constant.dart';
 
 class SecondPage extends StatelessWidget {
   const SecondPage({
@@ -12,7 +13,24 @@ class SecondPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("Second page")),
       body: Center(
-        child: Text("Second page"),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {},
+              child: Text(
+                'Close',
+              ),
+              style: ElevatedButton.styleFrom(
+                // backgroundColor: Theme.of(context).primaryColor,
+                textStyle: TextStyle(
+                  color: primaryColor,
+                  fontSize: 18,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
